@@ -5,8 +5,9 @@ const passport = require('passport');
 const keys = require('./config/keys');
 require('./models/User');
 require('./services/passport');
+require('./services/scrape.js');
 
-//mongoose.connect(keys.mongoURI);
+mongoose.connect(keys.mongoURI);
 
 const app = express();
 
