@@ -10,7 +10,10 @@ module.exports = app => {
 
   app.get(
     'auth/google/callback',
-    passport.authenticate('google')
+    passport.authenticate('google', { failureRedirect: '/login' }),
+    function(req, res) {
+      res.redirect('/');
+    }
   );
 
   app.get(

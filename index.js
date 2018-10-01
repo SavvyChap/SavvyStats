@@ -5,7 +5,7 @@ const passport = require('passport');
 const keys = require('./config/keys');
 require('./models/User');
 require('./services/passport');
-require('./services/scrape.js');
+// require('./services/googlesheets');
 
 mongoose.connect(keys.mongoURI);
 
